@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <style>
+    body {
+      width: 340px;
+      font-family: system-ui, -apple-system, sans-serif;
+      padding: 12px;
+      margin: 0;
+      background: #0f172a;
+      color: #f8fafc;
+    }
+    h3 { margin: 0 0 6px 0; font-size: 15px; }
+    #current-url {
+      font-size: 11px;
+      color: #94a3b8;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-bottom: 10px;
+    }
+    textarea {
+      width: 100%;
+      height: 65px;
+      box-sizing: border-box;
+      border-radius: 6px;
+      border: 1px solid #334155;
+      background: #1e293b;
+      color: #f8fafc;
+      padding: 8px;
+      resize: none;
+      font-size: 13px;
+    }
+    button {
+      width: 100%;
+      margin-top: 8px;
+      padding: 9px;
+      background: #3b82f6;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    button:disabled { background: #475569; cursor: not-allowed; }
+    #answer {
+      margin-top: 12px;
+      padding: 10px;
+      background: #1e293b;
+      border-radius: 6px;
+      font-size: 13px;
+      line-height: 1.45;
+      white-space: pre-wrap;
+      max-height: 220px;
+      overflow-y: auto;
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <h3>Ask This Webpage</h3>
+  <div id="current-url">Detecting URL...</div>
+  <textarea id="question" placeholder="Ask anything about this page..."></textarea>
+  <button id="ask-btn">Ask LangChain</button>
+  <div id="answer"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

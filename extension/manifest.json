@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "LangChain Webpage Q&A",
+  "version": "1.0.0",
+  "description": "Ask questions about the active tab using LangChain WebBaseLoader.",
+  "permissions": ["activeTab"],
+  "host_permissions": ["http://localhost:8000/*"],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
